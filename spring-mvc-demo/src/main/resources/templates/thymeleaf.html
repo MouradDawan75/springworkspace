@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/root-layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<div layout:fragment="content">
+
+<div class="container">
+<br/>
+<h2>Thymeleaf</h2>
+<br/><br/>
+<p>
+    Thymeleaf est un moteur de vues écrit en Java permettant d'intégrer du JavaScript et CSS.
+</p>
+<p>
+    I existe d'autres générateurs de vues en Java: JSP, Velocity, FreeMaker.
+</p>
+<p>
+    Thymeleaf est le plus récent et est devenu le moteur utilisé par défaut par Spring Boot.
+</p>
+<p>
+    Les templates HTML, doivent être placées dans le dossier src/main/resources/templates.
+    Les fichiers statiques (CSS, Javascript) doivent être placés dans src/main/resources/static
+</p>
+<p>
+    Un template Thymeleaf utilise des attributs insérés dans les tags HTML
+</p>
+<p>
+    Attributs Thymeleaf:
+    ${.......}: pour les expressions à evaluer<br/>
+    @{.......}: expression d'URL<br/>
+    *{.......}: expressions de sélection<br/>
+    #{.......}: expressions de messages<br/>
+    ~{.......}: expressions de fragments
+</p>
+<br/><br/>
+<h3>Expressions à évaluer:</h3>
+<br/>
+<div>
+    <p>Name: <strong th:text="${player.name}"></strong></p>
+    <p>Rôle: <strong th:text="${player.role}"></strong></p>
+</div>
+<br/>
+<h3>Expressions de sélection:</h3>
+<br/>
+<h4>Player détails</h4>
+<div th:object="${player}">
+    <p>Name: <strong th:text="*{name}"></strong></p>
+    <p>Rôle: <strong th:text="*{role}"></strong></p>
+</div>
+<br/>
+<h3>Expressions d'URL:</h3>
+<br/>
+<a th:href="@{/}">Revenir a l'accueil</a>
+
+<br/>
+<h3>Boucle FOR:</h3>
+<br/>
+<table class="table table-dark table-striped-columns">
+    <thead>
+        <th>Name</th>
+        <th>Rôle</th>
+    </thead>
+    <tbody>
+        <tr th:each="p : ${players}">
+            <td th:text="${p.name}">vide</td>
+            <td th:text="${p.role}">vide</td>
+        </tr>
+    </tbody>
+</table>
+
+    <br/>
+    <h3>Condition IF/Unless:</h3>
+    <br/>
+    <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Rôle</th>
+        </thead>
+        <tbody>
+        <tr th:each="p : ${players}">
+            <td th:text="${p.name}">vide</td>
+            <td >
+                <a class="btn btn-primary" th:if="${p.role} == 'admin'">Update</a>
+                <a class="btn btn-primary" th:if="${p.role} == 'admin'">Delete</a>
+                <a class="btn btn-success" th:unless="${p.role} == 'admin'">View</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+    <h3>Condition Switch/Case:</h3>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <h4 th:text="${player.name}"></h4>
+            <div th:switch="${player.role}">
+                <p th:case="admin">Player is Admin</p>
+                <p th:case="manager">Player is manager</p>
+
+                <!-- case default "*" -->
+                <p th:case="*">Player with default role</p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <h3>Drowdown Liste:</h3>
+    <br/>
+    <p>Exemple basic</p>
+    <select>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+    </select>
+    <br/><br/>
+    <p>Liste fournie par le Controller</p>
+    <select>
+        <option value="0">Selection Option</option>
+        <option th:each="option : ${options}" th:text="${option}" th:value="${option}"></option>
+    </select>
+    <br/><br/>
+    <p>A partir d'une Enum</p>
+    <select name="color">
+        <option th:each="color : ${T(fr.dawan.spring_mvc_demo.Color).values()}" th:text="${color}" th:value="${color}"></option>
+    </select>
+<br/>
+    <h3>Envoi de formulaire:</h3>
+    <br/>
+    <form th:action="@{/thymeleaf}" method="post">
+        Name: <input type="text" name="nom"/>
+        Rôle: <input type="text" name="role"/>
+        <input type="submit" class="btn btn-primary" value="Envoyer">
+    </form>
+    <div th:if="${formOk}">
+        <span th:text="${nom}"></span>
+        <span th:text="${role}"></span>
+    </div>
+    <br/>
+    <h3>Validation de formulaires:</h3>
+    <br/>
+    <form th:action="@{/formValidation}" method="post" th:object="${playerForm}">
+        Name: <input type="text" th:field="*{name}"/><br/>
+        <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="alert alert-danger"></div>
+        Rôle: <input type="text" th:field="*{role}"/><br/>
+        <div th:if="${#fields.hasErrors('role')}" th:errors="*{role}" class="alert alert-danger"></div>
+        Age: <input type="text" th:field="*{age}"/><br/>
+        <div th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="alert alert-danger"></div>
+        Size: <input type="text" th:field="*{size}"/><br/>
+        <div th:if="${#fields.hasErrors('size')}" th:errors="*{size}" class="alert alert-danger"></div>
+        Tél.: <input type="text" th:field="*{telephone}"/><br/>
+        <div th:if="${#fields.hasErrors('telephone')}" th:errors="*{telephone}" class="alert alert-danger"></div><br/>
+        <input type="submit" class="btn btn-primary" value="Envoyer">
+    </form>
+    <div th:if="${formValide}">
+       <span>Formulaire valide</span>
+    </div>
+    <br/>
+    <h3>Gestion des params: requêtes, session et application</h3>
+    <br/>
+    <p><strong>Request:</strong></p>
+    <a th:href="@{/thymeleaf/redirect}">request param</a>
+    <p th:text="${param.q+' '+param.name}"></p>
+    <br/>
+    <p><strong>Session:</strong></p>
+    <a th:href="@{/thymeleaf/session}">session param</a>
+    <p th:text="${session.nom}"></p>
+    <br/>
+    <p><strong>Servlet Context (application):</strong></p>
+    <a th:href="@{/thymeleaf/servletContext}">application context param</a>
+    <p th:text="${application.prenom}"></p>
+
+    <br/>
+    <p><strong>Spring Bean:</strong></p>
+    <p>Thymefeaf autorise l'accès aux bean instanciés via l'annotation @Bean(name ="nom bean")</p>
+
+    <p th:text="${@playerBean.name}"></p>
+    <br/>
+    <h3>Expressions de fragments:</h3>
+    <br/>
+    <div th:replace="~{shared/header::header}"></div>
+    <div>
+        Contenu de la page en cours..........
+    </div>
+    <div th:replace="~{shared/footer::footer}"></div>
+    <br/><br/>
+    <h3>Thymeleaf Layouts:</h3>
+    <p>
+        Permet de créer des pages de dispositions (Matser Page). Pratique pour définir des menus de navigation.
+        Dans le pox.xml, ajoutez la dépendance thymeleaf layout dialect.
+    </p>
+
+</div>
+</div>
+<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

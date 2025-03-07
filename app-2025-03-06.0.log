@@ -1,0 +1,830 @@
+2025-03-06 16:04:20.551 INFO  2951  --- [main] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 7620 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:04:20.558 INFO  2958  --- [main] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:04:22.536 INFO  4936  --- [main] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:04:22.598 INFO  4998  --- [main] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:04:24.041 INFO  6441  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:04:24.084 INFO  6484  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:04:24.085 INFO  6485  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:04:24.249 INFO  6649  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:04:24.250 INFO  6650  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3540 ms
+2025-03-06 16:04:24.974 INFO  7374  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:04:25.098 INFO  7498  --- [main] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-06 16:04:25.202 INFO  7602  --- [main] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:04:25.945 INFO  8345  --- [main] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:04:26.019 INFO  8419  --- [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2025-03-06 16:04:26.266 INFO  8666  --- [main] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3739f3c9
+2025-03-06 16:04:26.271 INFO  8671  --- [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2025-03-06 16:04:26.439 INFO  8839  --- [main] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:04:27.201 INFO  9601  --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:04:27.210 INFO  9610  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:04:27.324 WARN  9724  --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:04:27.395 INFO  9795  --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:04:27.601 DEBUG 10001 --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:04:27.806 DEBUG 10206 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:04:27.889 DEBUG 10289 --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:04:28.090 DEBUG 10490 --- [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:04:28.450 INFO  10850 --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:04:28.480 INFO  10880 --- [main] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 9.593 seconds (process running for 12.645)
+2025-03-06 16:04:38.494 INFO  20894 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 16:04:38.505 INFO  20905 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 16:04:38.506 DEBUG 20906 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 16:04:38.506 DEBUG 20906 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 16:04:38.507 DEBUG 20907 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 16:04:38.513 DEBUG 20913 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@407b41e6
+2025-03-06 16:04:38.514 DEBUG 20914 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7a34c1f6
+2025-03-06 16:04:38.515 DEBUG 20915 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 16:04:38.517 INFO  20917 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms
+2025-03-06 16:04:38.546 DEBUG 20946 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/", parameters={}
+2025-03-06 16:04:38.576 DEBUG 20976 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.HomeController#accueil(Model)
+2025-03-06 16:04:38.709 DEBUG 21109 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:04:39.681 DEBUG 22081 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:04:39.789 DEBUG 22189 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 16:04:39.806 DEBUG 22206 --- [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:04:39.828 DEBUG 22228 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 16:04:39.867 DEBUG 22267 --- [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 16:04:39.872 DEBUG 22272 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 16:04:39.898 DEBUG 22298 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 16:04:39.903 DEBUG 22303 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 16:04:39.976 DEBUG 22376 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 16:04:39.997 DEBUG 22397 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 16:04:39 CET 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-03-06 16:04:40.184 DEBUG 22584 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 16:18:29.163 INFO  851563 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:18:29.180 INFO  851580 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:18:29.188 INFO  851588 --- [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:18:29.193 INFO  851593 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2025-03-06 16:18:29.200 INFO  851600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2025-03-06 16:20:04.935 INFO  2174  --- [main] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 1608 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:20:04.939 INFO  2178  --- [main] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:20:07.001 INFO  4240  --- [main] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:20:07.104 INFO  4343  --- [main] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:20:08.880 INFO  6119  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:20:08.918 INFO  6157  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:20:08.919 INFO  6158  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:20:09.056 INFO  6295  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:20:09.058 INFO  6297  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3985 ms
+2025-03-06 16:20:09.522 INFO  6761  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:20:09.642 INFO  6881  --- [main] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-06 16:20:09.740 INFO  6979  --- [main] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:20:10.425 INFO  7664  --- [main] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:20:10.507 INFO  7746  --- [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2025-03-06 16:20:10.698 INFO  7937  --- [main] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@60c96eb4
+2025-03-06 16:20:10.704 INFO  7943  --- [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2025-03-06 16:20:10.836 INFO  8075  --- [main] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:20:11.518 INFO  8757  --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:20:11.539 INFO  8778  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:20:11.628 WARN  8867  --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:20:11.684 INFO  8923  --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:20:11.811 DEBUG 9050  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:20:11.996 DEBUG 9235  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:20:12.068 DEBUG 9307  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:20:12.214 DEBUG 9453  --- [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:20:12.490 INFO  9729  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:20:12.518 INFO  9757  --- [main] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 8.619 seconds (process running for 10.33)
+2025-03-06 16:20:24.091 INFO  21330 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 16:20:24.092 INFO  21331 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 16:20:24.095 DEBUG 21334 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 16:20:24.096 DEBUG 21335 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 16:20:24.098 DEBUG 21337 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 16:20:24.100 DEBUG 21339 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@707f4647
+2025-03-06 16:20:24.100 DEBUG 21339 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3d3b272a
+2025-03-06 16:20:24.102 DEBUG 21341 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 16:20:24.102 INFO  21341 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms
+2025-03-06 16:20:24.122 DEBUG 21361 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/", parameters={}
+2025-03-06 16:20:24.154 DEBUG 21393 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.HomeController#accueil(Model)
+2025-03-06 16:20:24.303 DEBUG 21542 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:20:24.966 DEBUG 22205 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:20:25.006 DEBUG 22245 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 16:20:25.017 DEBUG 22256 --- [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:20:25.023 DEBUG 22262 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 16:20:25.036 DEBUG 22275 --- [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 16:20:25.036 DEBUG 22275 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 16:20:25.047 DEBUG 22286 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 16:20:25.050 DEBUG 22289 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 16:20:25.088 DEBUG 22327 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 16:20:25.094 DEBUG 22333 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 16:20:25 CET 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-03-06 16:20:25.190 DEBUG 22429 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 16:20:26.583 DEBUG 23822 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:20:26.584 DEBUG 23823 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:20:26.600 DEBUG 23839 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:20:26.628 DEBUG 23867 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:23:12.542 INFO  189781 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:23:12.561 INFO  189800 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:23:12.576 INFO  189815 --- [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:23:12.581 INFO  189820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2025-03-06 16:23:12.587 INFO  189826 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2025-03-06 16:26:40.216 INFO  2346  --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 1188 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:26:40.226 INFO  2356  --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:26:40.466 INFO  2596  --- [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-06 16:26:40.467 INFO  2597  --- [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-06 16:26:42.812 INFO  4942  --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:26:42.862 INFO  4992  --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:26:44.233 INFO  6363  --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:26:44.260 INFO  6390  --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:26:44.263 INFO  6393  --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:26:44.362 INFO  6492  --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:26:44.363 INFO  6493  --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3895 ms
+2025-03-06 16:26:45.195 INFO  7325  --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:26:45.344 INFO  7474  --- [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-06 16:26:45.464 INFO  7594  --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:26:46.251 INFO  8381  --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:26:46.346 INFO  8476  --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2025-03-06 16:26:46.574 INFO  8704  --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7c03202c
+2025-03-06 16:26:46.578 INFO  8708  --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2025-03-06 16:26:46.693 INFO  8823  --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:26:47.460 INFO  9590  --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:26:47.469 INFO  9599  --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:26:47.575 WARN  9705  --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:26:47.629 INFO  9759  --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:26:47.846 DEBUG 9976  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:26:48.090 DEBUG 10220 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:26:48.216 DEBUG 10346 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:26:48.394 DEBUG 10524 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:26:48.681 INFO  10811 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 16:26:48.758 INFO  10888 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:26:48.795 INFO  10925 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 9.639 seconds (process running for 11.672)
+2025-03-06 16:26:52.148 INFO  14278 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 4 deletions, 1 modification)
+2025-03-06 16:26:52.153 INFO  14283 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:26:52.168 INFO  14298 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:26:52.174 INFO  14304 --- [Thread-5] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:26:52.179 INFO  14309 --- [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2025-03-06 16:26:52.190 INFO  14320 --- [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2025-03-06 16:26:52.570 INFO  14700 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 1188 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:26:52.571 INFO  14701 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:26:53.269 INFO  15399 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:26:53.273 INFO  15403 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:26:53.705 INFO  15835 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:26:53.707 INFO  15837 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:26:53.708 INFO  15838 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:26:53.749 INFO  15879 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:26:53.751 INFO  15881 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1175 ms
+2025-03-06 16:26:53.832 INFO  15962 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:26:53.839 INFO  15969 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:26:53.862 INFO  15992 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:26:53.865 INFO  15995 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Starting...
+2025-03-06 16:26:53.870 INFO  16000 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@2d473c0a
+2025-03-06 16:26:53.871 INFO  16001 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Start completed.
+2025-03-06 16:26:53.877 INFO  16007 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:26:53.936 INFO  16066 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:26:53.937 INFO  16067 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:26:54.138 WARN  16268 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:26:54.243 INFO  16373 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:26:54.303 DEBUG 16433 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:26:54.455 DEBUG 16585 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:26:54.535 DEBUG 16665 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:26:54.564 DEBUG 16694 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:26:54.653 INFO  16783 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 16:26:54.675 INFO  16805 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:26:54.683 INFO  16813 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 2.384 seconds (process running for 17.559)
+2025-03-06 16:26:54.686 INFO  16816 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 16:26:59.102 INFO  21232 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2025-03-06 16:26:59.104 INFO  21234 --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:26:59.118 INFO  21248 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:26:59.122 INFO  21252 --- [Thread-7] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:26:59.123 INFO  21253 --- [Thread-7] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown initiated...
+2025-03-06 16:26:59.126 INFO  21256 --- [Thread-7] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown completed.
+2025-03-06 16:26:59.569 INFO  21699 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 1188 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:26:59.570 INFO  21700 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:27:00.366 INFO  22496 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:27:00.371 INFO  22501 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:27:00.540 INFO  22670 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:27:00.541 INFO  22671 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:27:00.542 INFO  22672 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:27:00.568 INFO  22698 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:27:00.568 INFO  22698 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 948 ms
+2025-03-06 16:27:00.722 INFO  22852 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:27:00.731 INFO  22861 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:27:00.762 INFO  22892 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:27:00.766 INFO  22896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Starting...
+2025-03-06 16:27:00.771 INFO  22901 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@74fbfe0e
+2025-03-06 16:27:00.772 INFO  22902 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Start completed.
+2025-03-06 16:27:00.775 INFO  22905 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:27:00.819 INFO  22949 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:27:00.820 INFO  22950 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:27:01.106 WARN  23236 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:27:01.141 INFO  23271 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:27:01.175 DEBUG 23305 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:27:01.224 DEBUG 23354 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:27:01.236 DEBUG 23366 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:27:01.255 DEBUG 23385 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:27:01.422 INFO  23552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 16:27:01.462 INFO  23592 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:27:01.471 INFO  23601 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 2.245 seconds (process running for 24.348)
+2025-03-06 16:27:01.474 INFO  23604 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 16:28:36.717 INFO  118847 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:28:36.731 INFO  118861 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:28:36.737 INFO  118867 --- [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:28:36.740 INFO  118870 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Shutdown initiated...
+2025-03-06 16:28:36.744 INFO  118874 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Shutdown completed.
+2025-03-06 16:31:45.331 INFO  2321  --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:31:45.342 INFO  2332  --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:31:45.493 INFO  2483  --- [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-06 16:31:45.494 INFO  2484  --- [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-06 16:31:47.052 INFO  4042  --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:31:47.131 INFO  4121  --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:31:48.693 INFO  5683  --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:31:48.725 INFO  5715  --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:31:48.727 INFO  5717  --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:31:48.849 INFO  5839  --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:31:48.850 INFO  5840  --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3354 ms
+2025-03-06 16:31:49.245 INFO  6235  --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:31:49.337 INFO  6327  --- [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-06 16:31:49.396 INFO  6386  --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:31:50.041 INFO  7031  --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:31:50.109 INFO  7099  --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2025-03-06 16:31:50.293 INFO  7283  --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6a17db1a
+2025-03-06 16:31:50.298 INFO  7288  --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2025-03-06 16:31:50.444 INFO  7434  --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:31:51.139 INFO  8129  --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:31:51.147 INFO  8137  --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:31:51.281 WARN  8271  --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:31:51.334 INFO  8324  --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:31:51.479 DEBUG 8469  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:31:51.639 DEBUG 8629  --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:31:51.721 DEBUG 8711  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:31:51.869 DEBUG 8859  --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:31:52.122 INFO  9112  --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 16:31:52.194 INFO  9184  --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:31:52.227 INFO  9217  --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 7.889 seconds (process running for 9.912)
+2025-03-06 16:31:58.363 INFO  15353 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 16:31:58.364 INFO  15354 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 16:31:58.365 DEBUG 15355 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 16:31:58.365 DEBUG 15355 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 16:31:58.366 DEBUG 15356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 16:31:58.368 DEBUG 15358 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1c9bad5d
+2025-03-06 16:31:58.369 DEBUG 15359 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5c72782f
+2025-03-06 16:31:58.369 DEBUG 15359 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 16:31:58.369 INFO  15359 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 4 ms
+2025-03-06 16:31:58.389 DEBUG 15379 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:31:58.410 DEBUG 15400 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:31:58.553 DEBUG 15543 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:31:59.206 DEBUG 16196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:34:01.853 DEBUG 138843 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:34:01.855 DEBUG 138845 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:34:01.860 DEBUG 138850 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:34:01.875 DEBUG 138865 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:34:04.212 DEBUG 141202 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:34:04.214 DEBUG 141204 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:34:04.216 DEBUG 141206 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:34:04.233 DEBUG 141223 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:34:33.708 DEBUG 170698 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : GET "/", parameters={}
+2025-03-06 16:34:33.712 DEBUG 170702 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.HomeController#accueil(Model)
+2025-03-06 16:34:33.715 DEBUG 170705 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:34:33.729 DEBUG 170719 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:34:35.111 DEBUG 172101 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:34:35.111 DEBUG 172101 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:34:35.113 DEBUG 172103 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:34:35.128 DEBUG 172118 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:39:46.639 DEBUG 483629 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:39:46.640 DEBUG 483630 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:39:46.642 DEBUG 483632 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:39:46.652 DEBUG 483642 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:39:49.341 DEBUG 486331 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:39:49.341 DEBUG 486331 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:39:49.343 DEBUG 486333 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:39:49.359 DEBUG 486349 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:39:49.663 INFO  486653 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 2 deletions, 1 modification)
+2025-03-06 16:39:49.681 INFO  486671 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:39:49.710 INFO  486700 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:39:49.718 INFO  486708 --- [Thread-5] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:39:49.725 INFO  486715 --- [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2025-03-06 16:39:49.732 INFO  486722 --- [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2025-03-06 16:39:50.082 INFO  487072 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:39:50.082 INFO  487072 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:39:50.666 INFO  487656 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:39:50.675 INFO  487665 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:39:50.916 INFO  487906 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:39:50.918 INFO  487908 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:39:50.919 INFO  487909 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:39:50.955 INFO  487945 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:39:50.957 INFO  487947 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 868 ms
+2025-03-06 16:39:51.024 INFO  488014 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:39:51.032 INFO  488022 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:39:51.068 INFO  488058 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:39:51.070 INFO  488060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Starting...
+2025-03-06 16:39:51.077 INFO  488067 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@94182ed
+2025-03-06 16:39:51.078 INFO  488068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Start completed.
+2025-03-06 16:39:51.081 INFO  488071 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:39:51.127 INFO  488117 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:39:51.127 INFO  488117 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:39:51.178 WARN  488168 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:39:51.194 INFO  488184 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:39:51.222 DEBUG 488212 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:39:51.286 DEBUG 488276 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:39:51.300 DEBUG 488290 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:39:51.334 DEBUG 488324 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:39:51.421 INFO  488411 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 16:39:51.449 INFO  488439 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:39:51.455 INFO  488445 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 1.623 seconds (process running for 489.14)
+2025-03-06 16:39:51.465 INFO  488455 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 16:39:51.597 INFO  488587 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 16:39:51.597 INFO  488587 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 16:39:51.598 DEBUG 488588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 16:39:51.598 DEBUG 488588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 16:39:51.598 DEBUG 488588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 16:39:51.599 DEBUG 488589 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@562e26d2
+2025-03-06 16:39:51.599 DEBUG 488589 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5c0507bf
+2025-03-06 16:39:51.600 DEBUG 488590 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 16:39:51.600 INFO  488590 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 2 ms
+2025-03-06 16:39:51.601 DEBUG 488591 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:39:51.608 DEBUG 488598 --- [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:39:51.613 DEBUG 488603 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 16:39:51.623 DEBUG 488613 --- [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource thymeleaf.]
+2025-03-06 16:39:51.624 DEBUG 488614 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 16:39:51.637 DEBUG 488627 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 16:39:51.640 DEBUG 488630 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-06 16:39:51.661 DEBUG 488651 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-06 16:39:51.678 DEBUG 488668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 16:39:54.871 INFO  491861 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-03-06 16:39:54.872 INFO  491862 --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 16:39:54.884 INFO  491874 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 16:39:54.888 INFO  491878 --- [Thread-7] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:39:54.889 INFO  491879 --- [Thread-7] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown initiated...
+2025-03-06 16:39:54.896 INFO  491886 --- [Thread-7] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown completed.
+2025-03-06 16:39:55.091 INFO  492081 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 16:39:55.091 INFO  492081 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 16:39:55.568 INFO  492558 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 16:39:55.572 INFO  492562 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-03-06 16:39:55.772 INFO  492762 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 16:39:55.774 INFO  492764 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 16:39:55.774 INFO  492764 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 16:39:55.812 INFO  492802 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 16:39:55.813 INFO  492803 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 719 ms
+2025-03-06 16:39:55.883 INFO  492873 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 16:39:55.888 INFO  492878 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 16:39:55.904 INFO  492894 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 16:39:55.906 INFO  492896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Starting...
+2025-03-06 16:39:55.910 INFO  492900 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@10376e8d
+2025-03-06 16:39:55.910 INFO  492900 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Start completed.
+2025-03-06 16:39:55.915 INFO  492905 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 16:39:55.956 INFO  492946 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 16:39:55.958 INFO  492948 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 16:39:56.003 WARN  492993 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 16:39:56.016 INFO  493006 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 16:39:56.037 DEBUG 493027 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 16:39:56.083 DEBUG 493073 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 16:39:56.126 DEBUG 493116 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 16:39:56.161 DEBUG 493151 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 16:39:56.226 INFO  493216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 16:39:56.297 INFO  493287 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 16:39:56.306 INFO  493296 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 1.324 seconds (process running for 493.99)
+2025-03-06 16:39:56.309 INFO  493299 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 16:39:56.478 INFO  493468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 16:39:56.478 INFO  493468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 16:39:56.478 DEBUG 493468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 16:39:56.478 DEBUG 493468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 16:39:56.478 DEBUG 493468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 16:39:56.479 DEBUG 493469 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3acf8bdd
+2025-03-06 16:39:56.479 DEBUG 493469 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@579fefa7
+2025-03-06 16:39:56.480 DEBUG 493470 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 16:39:56.480 INFO  493470 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 2 ms
+2025-03-06 16:39:56.480 DEBUG 493470 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:39:56.481 DEBUG 493471 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:39:56.486 DEBUG 493476 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:39:56.539 DEBUG 493529 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:47:01.078 DEBUG 918068 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:47:01.079 DEBUG 918069 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:47:01.081 DEBUG 918071 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:47:01.098 DEBUG 918088 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:47:01.124 DEBUG 918114 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 16:47:01.124 DEBUG 918114 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 16:47:01.132 DEBUG 918122 --- [http-nio-8080-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:47:01.132 DEBUG 918122 --- [http-nio-8080-exec-5] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:47:01.146 DEBUG 918136 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:47:01.151 DEBUG 918141 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:47:06.365 DEBUG 923355 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:47:06.365 DEBUG 923355 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:47:06.367 DEBUG 923357 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:47:06.373 DEBUG 923363 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:47:06.400 DEBUG 923390 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 16:47:06.400 DEBUG 923390 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 16:47:06.402 DEBUG 923392 --- [http-nio-8080-exec-9] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:47:06.402 DEBUG 923392 --- [http-nio-8080-exec-8] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:47:06.413 DEBUG 923403 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:47:06.417 DEBUG 923407 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:53:55.947 DEBUG 1332937 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:53:55.949 DEBUG 1332939 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:53:55.950 DEBUG 1332940 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:53:55.973 DEBUG 1332963 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:53:55.996 DEBUG 1332986 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 16:53:55.997 DEBUG 1332987 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 16:53:55.997 DEBUG 1332987 --- [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:53:55.998 DEBUG 1332988 --- [http-nio-8080-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:53:56.009 DEBUG 1332999 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:53:56.009 DEBUG 1332999 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:59:47.390 DEBUG 1684380 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 16:59:47.391 DEBUG 1684381 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 16:59:47.392 DEBUG 1684382 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 16:59:47.412 DEBUG 1684402 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:59:47.438 DEBUG 1684428 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 16:59:47.439 DEBUG 1684429 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 16:59:47.439 DEBUG 1684429 --- [http-nio-8080-exec-8] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:59:47.439 DEBUG 1684429 --- [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:59:47.450 DEBUG 1684440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:59:47.452 DEBUG 1684442 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 16:59:47.492 DEBUG 1684482 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 16:59:47.496 DEBUG 1684486 --- [http-nio-8080-exec-10] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 16:59:47.498 DEBUG 1684488 --- [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 16:59:47.499 DEBUG 1684489 --- [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 16:59:47.500 DEBUG 1684490 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 16:59:47.500 DEBUG 1684490 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 16:59:47.502 DEBUG 1684492 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 16:59:47.534 DEBUG 1684524 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 16:59:47.542 DEBUG 1684532 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 16:59:47 CET 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-03-06 16:59:47.612 DEBUG 1684602 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:05.292 DEBUG 1702282 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:05.292 DEBUG 1702282 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 17:00:05.294 DEBUG 1702284 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 17:00:05.311 DEBUG 1702301 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:05.335 DEBUG 1702325 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 17:00:05.336 DEBUG 1702326 --- [http-nio-8080-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:05.347 DEBUG 1702337 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 17:00:05.348 DEBUG 1702338 --- [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:05.350 DEBUG 1702340 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:05.359 DEBUG 1702349 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:05.385 DEBUG 1702375 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 17:00:05.386 DEBUG 1702376 --- [http-nio-8080-exec-5] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:05.391 DEBUG 1702381 --- [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 17:00:05 CET 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-03-06 17:00:05.393 DEBUG 1702383 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:07.543 DEBUG 1704533 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:07.544 DEBUG 1704534 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 17:00:07.545 DEBUG 1704535 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 17:00:07.562 DEBUG 1704552 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:07.586 DEBUG 1704576 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 17:00:07.587 DEBUG 1704577 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 17:00:07.588 DEBUG 1704578 --- [http-nio-8080-exec-7] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:07.588 DEBUG 1704578 --- [http-nio-8080-exec-9] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:07.594 DEBUG 1704584 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:07.599 DEBUG 1704589 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:07.627 DEBUG 1704617 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 17:00:07.628 DEBUG 1704618 --- [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:07.631 DEBUG 1704621 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:07.634 DEBUG 1704624 --- [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 17:00:07.635 DEBUG 1704625 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:07.635 DEBUG 1704625 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:07.636 DEBUG 1704626 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 17:00:07.638 DEBUG 1704628 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 17:00:07.638 DEBUG 1704628 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 17:00:07 CET 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-03-06 17:00:07.641 DEBUG 1704631 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:08.566 DEBUG 1705556 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:08.566 DEBUG 1705556 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 17:00:08.567 DEBUG 1705557 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 17:00:08.579 DEBUG 1705569 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:08.602 DEBUG 1705592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 17:00:08.602 DEBUG 1705592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 17:00:08.602 DEBUG 1705592 --- [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:08.602 DEBUG 1705592 --- [http-nio-8080-exec-10] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:08.611 DEBUG 1705601 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:08.614 DEBUG 1705604 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:08.921 INFO  1705911 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 2 deletions, 1 modification)
+2025-03-06 17:00:08.923 INFO  1705913 --- [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 17:00:08.935 INFO  1705925 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 17:00:08.939 INFO  1705929 --- [Thread-11] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:08.940 INFO  1705930 --- [Thread-11] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Shutdown initiated...
+2025-03-06 17:00:08.943 INFO  1705933 --- [Thread-11] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Shutdown completed.
+2025-03-06 17:00:09.127 INFO  1706117 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 17:00:09.127 INFO  1706117 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 17:00:09.703 INFO  1706693 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 17:00:09.709 INFO  1706699 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2025-03-06 17:00:09.875 INFO  1706865 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 17:00:09.876 INFO  1706866 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 17:00:09.877 INFO  1706867 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 17:00:09.922 INFO  1706912 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 17:00:09.922 INFO  1706912 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 792 ms
+2025-03-06 17:00:09.974 INFO  1706964 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 17:00:09.980 INFO  1706970 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 17:00:09.997 INFO  1706987 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 17:00:09.999 INFO  1706989 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Starting...
+2025-03-06 17:00:10.003 INFO  1706993 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-4 - Added connection org.mariadb.jdbc.Connection@5fd6c2f3
+2025-03-06 17:00:10.003 INFO  1706993 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Start completed.
+2025-03-06 17:00:10.008 INFO  1706998 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 17:00:10.040 INFO  1707030 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 17:00:10.040 INFO  1707030 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:10.074 WARN  1707064 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 17:00:10.089 INFO  1707079 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 17:00:10.102 DEBUG 1707092 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2025-03-06 17:00:10.166 DEBUG 1707156 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 17:00:10.172 DEBUG 1707162 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 17:00:10.236 DEBUG 1707226 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 17:00:10.299 INFO  1707289 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 17:00:10.313 INFO  1707303 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 17:00:10.319 INFO  1707309 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 1.299 seconds (process running for 1708.003)
+2025-03-06 17:00:10.320 INFO  1707310 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 17:00:10.527 INFO  1707517 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 17:00:10.528 INFO  1707518 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 17:00:10.528 DEBUG 1707518 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 17:00:10.528 DEBUG 1707518 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 17:00:10.528 DEBUG 1707518 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 17:00:10.529 DEBUG 1707519 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2da0c772
+2025-03-06 17:00:10.529 DEBUG 1707519 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7658662b
+2025-03-06 17:00:10.529 DEBUG 1707519 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 17:00:10.530 INFO  1707520 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 2 ms
+2025-03-06 17:00:10.531 DEBUG 1707521 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:10.535 DEBUG 1707525 --- [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:10.536 DEBUG 1707526 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:10.538 DEBUG 1707528 --- [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource thymeleaf.]
+2025-03-06 17:00:10.538 DEBUG 1707528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:10.538 DEBUG 1707528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:10.538 DEBUG 1707528 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-06 17:00:10.556 DEBUG 1707546 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-06 17:00:10.558 DEBUG 1707548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:12.220 DEBUG 1709210 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:12.221 DEBUG 1709211 --- [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:12.223 DEBUG 1709213 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:12.223 DEBUG 1709213 --- [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource thymeleaf.]
+2025-03-06 17:00:12.223 DEBUG 1709213 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:12.224 DEBUG 1709214 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:12.225 DEBUG 1709215 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-06 17:00:12.232 DEBUG 1709222 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-06 17:00:12.235 DEBUG 1709225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:12.264 DEBUG 1709254 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 17:00:12.265 DEBUG 1709255 --- [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:12.267 DEBUG 1709257 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:12.267 DEBUG 1709257 --- [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 17:00:12.267 DEBUG 1709257 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:12.268 DEBUG 1709258 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:12.268 DEBUG 1709258 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 17:00:12.270 DEBUG 1709260 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 17:00:12.271 DEBUG 1709261 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 17:00:12 CET 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-03-06 17:00:12.281 DEBUG 1709271 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:13.271 DEBUG 1710261 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:13.272 DEBUG 1710262 --- [http-nio-8080-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:13.274 DEBUG 1710264 --- [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:13.274 DEBUG 1710264 --- [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource thymeleaf.]
+2025-03-06 17:00:13.277 DEBUG 1710267 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:13.277 DEBUG 1710267 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:13.278 DEBUG 1710268 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-06 17:00:13.293 DEBUG 1710283 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-06 17:00:13.296 DEBUG 1710286 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:13.808 INFO  1710798 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-03-06 17:00:13.810 INFO  1710800 --- [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 17:00:13.825 INFO  1710815 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 17:00:13.828 INFO  1710818 --- [Thread-15] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:13.829 INFO  1710819 --- [Thread-15] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Shutdown initiated...
+2025-03-06 17:00:13.832 INFO  1710822 --- [Thread-15] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Shutdown completed.
+2025-03-06 17:00:14.031 INFO  1711021 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 17:00:14.032 INFO  1711022 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 17:00:14.528 INFO  1711518 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 17:00:14.535 INFO  1711525 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-03-06 17:00:14.740 INFO  1711730 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 17:00:14.743 INFO  1711733 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 17:00:14.744 INFO  1711734 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 17:00:14.779 INFO  1711769 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 17:00:14.779 INFO  1711769 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 742 ms
+2025-03-06 17:00:14.830 INFO  1711820 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 17:00:14.833 INFO  1711823 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 17:00:14.849 INFO  1711839 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 17:00:14.851 INFO  1711841 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-5 - Starting...
+2025-03-06 17:00:14.856 INFO  1711846 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-5 - Added connection org.mariadb.jdbc.Connection@5e8ebc9a
+2025-03-06 17:00:14.857 INFO  1711847 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-5 - Start completed.
+2025-03-06 17:00:14.860 INFO  1711850 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 17:00:14.894 INFO  1711884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 17:00:14.895 INFO  1711885 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:14.925 WARN  1711915 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 17:00:14.937 INFO  1711927 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 17:00:14.953 DEBUG 1711943 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 17:00:15.004 DEBUG 1711994 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 17:00:15.046 DEBUG 1712036 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 17:00:15.099 DEBUG 1712089 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 17:00:15.153 INFO  1712143 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 17:00:15.165 INFO  1712155 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 17:00:15.171 INFO  1712161 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 1.248 seconds (process running for 1712.855)
+2025-03-06 17:00:15.173 INFO  1712163 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 17:00:15.190 INFO  1712180 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 17:00:15.191 INFO  1712181 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 17:00:15.191 DEBUG 1712181 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 17:00:15.192 DEBUG 1712182 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 17:00:15.193 DEBUG 1712183 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 17:00:15.195 DEBUG 1712185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4976eea0
+2025-03-06 17:00:15.196 DEBUG 1712186 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@185c5aa1
+2025-03-06 17:00:15.196 DEBUG 1712186 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 17:00:15.196 INFO  1712186 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 5 ms
+2025-03-06 17:00:15.197 DEBUG 1712187 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:15.197 DEBUG 1712187 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 17:00:15.201 DEBUG 1712191 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 17:00:15.332 DEBUG 1712322 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:15.379 DEBUG 1712369 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 17:00:15.384 DEBUG 1712374 --- [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:15.390 DEBUG 1712380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:15.398 DEBUG 1712388 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 17:00:15.401 DEBUG 1712391 --- [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:15.408 DEBUG 1712398 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:37.783 DEBUG 1734773 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:37.784 DEBUG 1734774 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 17:00:37.785 DEBUG 1734775 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 17:00:37.799 DEBUG 1734789 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:37.814 DEBUG 1734804 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 17:00:37.814 DEBUG 1734804 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 17:00:37.815 DEBUG 1734805 --- [http-nio-8080-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:37.815 DEBUG 1734805 --- [http-nio-8080-exec-7] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:37.820 DEBUG 1734810 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:37.827 DEBUG 1734817 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:38.298 INFO  1735288 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-03-06 17:00:38.299 INFO  1735289 --- [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 17:00:38.315 INFO  1735305 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 17:00:38.318 INFO  1735308 --- [Thread-19] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:38.319 INFO  1735309 --- [Thread-19] com.zaxxer.hikari.HikariDataSource : HikariPool-5 - Shutdown initiated...
+2025-03-06 17:00:38.321 INFO  1735311 --- [Thread-19] com.zaxxer.hikari.HikariDataSource : HikariPool-5 - Shutdown completed.
+2025-03-06 17:00:38.481 INFO  1735471 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 17:00:38.481 INFO  1735471 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 17:00:38.784 INFO  1735774 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 17:00:38.789 INFO  1735779 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-03-06 17:00:38.897 INFO  1735887 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 17:00:38.898 INFO  1735888 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 17:00:38.898 INFO  1735888 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 17:00:38.923 INFO  1735913 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 17:00:38.923 INFO  1735913 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 440 ms
+2025-03-06 17:00:38.990 INFO  1735980 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 17:00:38.996 INFO  1735986 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 17:00:39.018 INFO  1736008 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 17:00:39.019 INFO  1736009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-6 - Starting...
+2025-03-06 17:00:39.023 INFO  1736013 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-6 - Added connection org.mariadb.jdbc.Connection@7c517f46
+2025-03-06 17:00:39.023 INFO  1736013 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-6 - Start completed.
+2025-03-06 17:00:39.025 INFO  1736015 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 17:00:39.063 INFO  1736053 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 17:00:39.064 INFO  1736054 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:39.090 WARN  1736080 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 17:00:39.100 INFO  1736090 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 17:00:39.111 DEBUG 1736101 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2025-03-06 17:00:39.145 DEBUG 1736135 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 17:00:39.150 DEBUG 1736140 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 17:00:39.163 DEBUG 1736153 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 17:00:39.237 INFO  1736227 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 17:00:39.261 INFO  1736251 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 17:00:39.267 INFO  1736257 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 0.867 seconds (process running for 1736.952)
+2025-03-06 17:00:39.269 INFO  1736259 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 17:00:40.667 INFO  1737657 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 17:00:40.668 INFO  1737658 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 17:00:40.668 DEBUG 1737658 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 17:00:40.668 DEBUG 1737658 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 17:00:40.668 DEBUG 1737658 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 17:00:40.669 DEBUG 1737659 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@281bd4d
+2025-03-06 17:00:40.669 DEBUG 1737659 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4ad829a1
+2025-03-06 17:00:40.669 DEBUG 1737659 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 17:00:40.669 INFO  1737659 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 1 ms
+2025-03-06 17:00:40.670 DEBUG 1737660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:40.670 DEBUG 1737660 --- [http-nio-8080-exec-1] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:40.673 DEBUG 1737663 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:40.673 DEBUG 1737663 --- [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource thymeleaf.]
+2025-03-06 17:00:40.673 DEBUG 1737663 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:40.674 DEBUG 1737664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:40.674 DEBUG 1737664 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-06 17:00:40.683 DEBUG 1737673 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-06 17:00:40.685 DEBUG 1737675 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:40.707 DEBUG 1737697 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/favicon.ico", parameters={}
+2025-03-06 17:00:40.708 DEBUG 1737698 --- [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:40.709 DEBUG 1737699 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+2025-03-06 17:00:40.709 DEBUG 1737699 --- [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-03-06 17:00:40.710 DEBUG 1737700 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 404 NOT_FOUND
+2025-03-06 17:00:40.713 DEBUG 1737703 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-06 17:00:40.714 DEBUG 1737704 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-06 17:00:40.719 DEBUG 1737709 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2025-03-06 17:00:40.719 DEBUG 1737709 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor : Writing [{timestamp=Thu Mar 06 17:00:40 CET 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-03-06 17:00:40.720 DEBUG 1737710 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Exiting from "ERROR" dispatch, status 404
+2025-03-06 17:00:41.732 INFO  1738722 --- [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-03-06 17:00:41.740 INFO  1738730 --- [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 17:00:41.757 INFO  1738747 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 17:00:41.759 INFO  1738749 --- [Thread-23] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:41.760 INFO  1738750 --- [Thread-23] com.zaxxer.hikari.HikariDataSource : HikariPool-6 - Shutdown initiated...
+2025-03-06 17:00:41.765 INFO  1738755 --- [Thread-23] com.zaxxer.hikari.HikariDataSource : HikariPool-6 - Shutdown completed.
+2025-03-06 17:00:41.925 INFO  1738915 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Starting SpringMvcDemoApplication using Java 17.0.12 with PID 3232 (C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo\target\classes started by oem in C:\Users\oem\Desktop\SpringFormation\spring-mvc-demo\spring-mvc-demo)
+2025-03-06 17:00:41.926 INFO  1738916 --- [restartedMain] f.d.s.SpringMvcDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-06 17:00:42.278 INFO  1739268 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-06 17:00:42.282 INFO  1739272 --- [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-03-06 17:00:42.420 INFO  1739410 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port 8080 (http)
+2025-03-06 17:00:42.421 INFO  1739411 --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat]
+2025-03-06 17:00:42.422 INFO  1739412 --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-06 17:00:42.450 INFO  1739440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2025-03-06 17:00:42.450 INFO  1739440 --- [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 521 ms
+2025-03-06 17:00:42.506 INFO  1739496 --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-06 17:00:42.511 INFO  1739501 --- [restartedMain] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2025-03-06 17:00:42.538 INFO  1739528 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-06 17:00:42.539 INFO  1739529 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-7 - Starting...
+2025-03-06 17:00:42.545 INFO  1739535 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-7 - Added connection org.mariadb.jdbc.Connection@37dda391
+2025-03-06 17:00:42.546 INFO  1739536 --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-7 - Start completed.
+2025-03-06 17:00:42.547 INFO  1739537 --- [restartedMain] o.hibernate.orm.connections.pooling : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-06 17:00:42.588 INFO  1739578 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-06 17:00:42.589 INFO  1739579 --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:00:42.615 WARN  1739605 --- [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-06 17:00:42.623 INFO  1739613 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2025-03-06 17:00:42.636 DEBUG 1739626 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-03-06 17:00:42.664 DEBUG 1739654 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-06 17:00:42.671 DEBUG 1739661 --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-06 17:00:42.687 DEBUG 1739677 --- [restartedMain] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-06 17:00:42.765 INFO  1739755 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2025-03-06 17:00:42.807 INFO  1739797 --- [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port 8080 (http) with context path '/'
+2025-03-06 17:00:42.811 INFO  1739801 --- [restartedMain] f.d.s.SpringMvcDemoApplication : Started SpringMvcDemoApplication in 0.961 seconds (process running for 1740.495)
+2025-03-06 17:00:42.814 INFO  1739804 --- [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-06 17:00:42.976 INFO  1739966 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-06 17:00:42.976 INFO  1739966 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2025-03-06 17:00:42.976 DEBUG 1739966 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected StandardServletMultipartResolver
+2025-03-06 17:00:42.977 DEBUG 1739967 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected AcceptHeaderLocaleResolver
+2025-03-06 17:00:42.977 DEBUG 1739967 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected FixedThemeResolver
+2025-03-06 17:00:42.977 DEBUG 1739967 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5b86ed9c
+2025-03-06 17:00:42.978 DEBUG 1739968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Detected org.springframework.web.servlet.support.SessionFlashMapManager@22c1831c
+2025-03-06 17:00:42.978 DEBUG 1739968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-06 17:00:42.978 INFO  1739968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 2 ms
+2025-03-06 17:00:42.978 DEBUG 1739968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : GET "/thymeleaf", parameters={}
+2025-03-06 17:00:42.979 DEBUG 1739969 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to fr.dawan.spring_mvc_demo.controllers.TestController#thymeleaf(Model)
+2025-03-06 17:00:42.985 DEBUG 1739975 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2025-03-06 17:00:43.106 DEBUG 1740096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:43.142 DEBUG 1740132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/css/bootstrap.min.css", parameters={}
+2025-03-06 17:00:43.145 DEBUG 1740135 --- [http-nio-8080-exec-2] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:43.145 DEBUG 1740135 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : GET "/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2025-03-06 17:00:43.148 DEBUG 1740138 --- [http-nio-8080-exec-4] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-06 17:00:43.160 DEBUG 1740150 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:00:43.167 DEBUG 1740157 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet : Completed 200 OK
+2025-03-06 17:01:58.773 INFO  1815763 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-06 17:01:58.789 INFO  1815779 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown : Graceful shutdown complete
+2025-03-06 17:01:58.793 INFO  1815783 --- [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-06 17:01:58.794 INFO  1815784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-7 - Shutdown initiated...
+2025-03-06 17:01:58.800 INFO  1815790 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-7 - Shutdown completed.
